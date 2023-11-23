@@ -1,0 +1,13 @@
+import React, { useEffect } from "react";
+import useAppFunction from "../../hooks/useAppFunction";
+
+const Home = () => {
+  const { handleAlert } = useAppFunction();
+  useEffect(() => {
+    handleAlert(true, "success", "hel ");
+  }, []);
+
+  return <div style={{ height: "1222vh" }}>Hello 1</div>;
+};
+
+export default Home;
