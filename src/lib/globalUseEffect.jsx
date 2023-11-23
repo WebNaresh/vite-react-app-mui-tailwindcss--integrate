@@ -1,5 +1,5 @@
 import React, { createContext, useEffect } from "react";
-import useAppState from "../../hooks/useAppState";
+import useAppState from "../hooks/useAppState";
 
 const UseEffectContext = createContext();
 
