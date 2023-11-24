@@ -1,6 +1,6 @@
 # Create ReactMateWindVite App 
 
-<img alt="Logo" align="right" src="https://github.com/WebNaresh/vite-react-app-mui-tailwindcss--integrate/assets/149777886/6f7837fe-d817-4763-81ad-10ea40fa2f09" width="20%" />
+<img alt="Logo" align="right" src='https://raw.githubusercontent.com/WebNaresh/vite-react-app-mui-tailwindcss--integrate/c13d1d838d287cd986f48ddd11433be41523acf0/src/assets/my.svg' width="20%" />
 
 
 
@@ -25,10 +25,6 @@ _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7
 
 Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
-
-<p align='center'>
-<img src='https://cdn.jsdelivr.net/gh/facebook/create-ReactMateWindVite-app@27b42ac7efa018f2541153ab30d63180f5fa39e0/screencast.svg' width='600' alt='npm start'>
-</p>
 
 ### Get Started Immediately
 
@@ -137,10 +133,6 @@ Runs the app in development mode.<br>
 The page will automatically reload if you make changes to the code.<br>
 You will see the build errors and lint warnings in the console.
 
-<p align='center'>
-<img src='https://cdn.jsdelivr.net/gh/marionebl/create-ReactMateWindVite-app@9f6282671c54f0874afd37a72f6689727b562498/screencast-error.svg' width='600' alt='Build errors'>
-</p>
-
 ### `npm test` or `yarn test`
 
 Runs the test watcher in an interactive mode.<br>
@@ -212,15 +204,6 @@ Here are a few common cases where you might want to try something else:
 
 - Finally, if you need **more customization**, check out [Neutrino](https://neutrino.js.org/) and its [ReactMateWindVite preset](https://neutrino.js.org/packages/ReactMateWindVite/).
 
-All of the above tools can work with little to no configuration.
-
-If you prefer configuring the build yourself, [follow this guide](https://Reactjs.org/docs/add-ReactMateWindVite-to-a-website.html).
-
-## ReactMateWindVite Native
-
-Looking for something similar, but for ReactMateWindVite Native?<br>
-Check out [Expo CLI](https://github.com/expo/expo-cli).
-
 ## Contributing
 
 We'd love to have your helping hand on `create-ReactMateWindVite-app`! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on what we're looking for and how to get started.
@@ -229,22 +212,17 @@ We'd love to have your helping hand on `create-ReactMateWindVite-app`! See [CONT
 
 Create ReactMateWindVite App is a community maintained project and all contributors are volunteers. If you'd like to support the future development of Create ReactMateWindVite App then please consider donating to our [Open Collective](https://opencollective.com/create-ReactMateWindVite-app).
 
-## Credits
-
-This project exists thanks to all the people who [contribute](CONTRIBUTING.md).<br>
-<a href="https://github.com/facebook/create-ReactMateWindVite-app/graphs/contributors"><img src="https://opencollective.com/create-ReactMateWindVite-app/contributors.svg?width=890&button=false" /></a>
-
-Thanks to [Netlify](https://www.netlify.com/) for hosting our documentation.
 
 ## Acknowledgements
 
 We are grateful to the authors of existing related projects for their ideas and collaboration:
 
-- [@eanplatter](https://github.com/eanplatter)
-- [@insin](https://github.com/insin)
-- [@mxstbr](https://github.com/mxstbr)
+- [@naresh](https://github.com/WebNaresh/)
 
 ## License
 
-Create ReactMateWindVite App is open source software [licensed as MIT](https://github.com/facebook/create-ReactMateWindVite-app/blob/main/LICENSE). The Create ReactMateWindVite App logo is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
-![image](https://github.com/WebNaresh/vite-react-app-mui-tailwindcss--integrate/assets/149777886/6f7837fe-d817-4763-81ad-10ea40fa2f09)
+Create ReactMateWindVite App is open source software [licensed as MIT]. The Create ReactMateWindVite App logo is licensed under
+
+<p align='center'>
+  <img src='https://raw.githubusercontent.com/WebNaresh/vite-react-app-mui-tailwindcss--integrate/c13d1d838d287cd986f48ddd11433be41523acf0/src/assets/my.svg' style='width: 400px; border-radius: 10px;' alt='Build errors'>
+</p>
