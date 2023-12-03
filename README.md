@@ -226,3 +226,101 @@ Create ReactMateWindVite App is open source software [licensed as MIT]. The Crea
 <p align='center'>
   <img src='https://raw.githubusercontent.com/WebNaresh/vite-react-app-mui-tailwindcss--integrate/c13d1d838d287cd986f48ddd11433be41523acf0/src/assets/my.svg' style='width: 400px; border-radius: 10px;' alt='Build errors'>
 </p>
+
+## How to deply this App
+## GitHub Actions Runner Deployment Guide
+
+This guide provides step-by-step instructions for deploying a self-hosted GitHub Actions runner on an AWS EC2 instance. Additionally, it includes optional steps for deploying an NGINX server for frontend deployment and setting up SSL certificates with Certbot.
+
+## 1. Create AWS EC2 Instance and Allocate Elastic IP
+
+- Launch an EC2 instance on AWS.
+- Allocate an Elastic IP and associate it with the EC2 instance.
+
+## 2. Install Node.js and GitHub Actions Runner
+
+```sh
+sudo apt update
+```
+```sh
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+```
+```sh
+sudo apt install nodejs
+```
+```sh
+node --version
+```
+
+
+
+# Add the GitHub Actions Runner
+./config.sh add --labels your-label-name
+ Configure and Start the Self-Hosted Runner
+```
+
+cd actions-runner-directory
+
+# Install the runner as a service
+```sh
+sudo ./svc.sh install
+```
+# Start the runner service
+```sh
+sudo ./svc.sh start
+```
+
+# Check the status of the runner
+```sh
+sudo ./svc.sh status
+```
+ Deploy NGINX for Frontend
+ ```sh
+sudo apt install nginx
+```
+
+# Edit NGINX configuration
+```sh
+sudo nano /etc/nginx/sites-available/default
+```
+
+# Paste the following file 
+# NGINX Configuration
+```sh
+server {
+    root /var/www/html;
+    server_name aegis-qa.argantechnology.com www.aegis-qa.argantechnolog.com www.aeigs.mooo.com aeigs.mooo.com;
+
+    location /api/ {
+        proxy_pass http://localhost:4000/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location / {
+        root /home/ubuntu/actions-runner-backend-qa/_work/AEGIS-frontend/AEGIS-frontend;
+        try_files $uri /index.html;
+    }
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/aegis-qa.argantechnology.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/aegis-qa.argantechnology.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    if ($host = aegis-qa.argantechnology.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name aegis-qa.argantechnology.com www.aegis-qa.argantechnolog.com www.aeigs.mooo.com aeigs.mooo.com;
+    return 404; # managed by Certbot
+}
+```
