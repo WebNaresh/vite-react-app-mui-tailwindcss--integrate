@@ -309,14 +309,7 @@ server {
 
 ```
 
-# Restart the nginx server after save
-```sh
-sudo service nginx restart
-```
-# Check the status of server after save
-```sh
-sudo service nginx restart
-```
+
 # Lets consider i have sever on localhost:4000 
 # that's why i written this code
 ```sh
@@ -332,6 +325,9 @@ sudo service nginx restart
 # you can remove it if you want (now deployment of backend is next step)
 ```sh
 sudo npm i pm2 --global
+```
+```sh
+sudo start npm  --name "backend-api-main" -- start
 ```
 # other command of pm2 if you need
 ```
@@ -351,10 +347,25 @@ pm2 startup ubuntu
 ```
 # Setup firewall
 
-```
+```sh
 sudo ufw enable
 sudo ufw status
-sudo ufw allow ssh (Port 22)
-sudo ufw allow http (Port 80)
-sudo ufw allow https (Port 443)
+sudo ufw allow ssh 
+sudo ufw allow http 
+sudo ufw allow https
+```
+## Add Path for nginx 
+# then add you own path also 
+```sh
+sudo chmod +x /home/
+sudo chmod +x /home/ubuntu
+```
+
+# Restart the nginx server after save
+```sh
+sudo service nginx restart
+```
+# Check the status of server after save
+```sh
+sudo service nginx status
 ```
