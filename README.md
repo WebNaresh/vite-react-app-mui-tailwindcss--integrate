@@ -330,3 +330,31 @@ sudo service nginx restart
     }
 ```
 # you can remove it if you want (now deployment of backend is next step)
+```sh
+sudo npm i pm2 --global
+```
+# other command of pm2 if you need
+```
+sudo npm i pm2 -g
+pm2 start index
+
+# Other pm2 commands
+pm2 show app
+pm2 status
+pm2 restart app
+pm2 stop app
+pm2 logs (Show log stream)
+pm2 flush (Clear logs)
+
+# To make sure app starts when reboot
+pm2 startup ubuntu
+```
+# Setup firewall
+
+```
+sudo ufw enable
+sudo ufw status
+sudo ufw allow ssh (Port 22)
+sudo ufw allow http (Port 80)
+sudo ufw allow https (Port 443)
+```
