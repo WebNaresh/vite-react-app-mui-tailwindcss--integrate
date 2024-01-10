@@ -327,7 +327,7 @@ server {
 sudo npm i pm2 --global
 ```
 ```sh
-sudo start npm  --name "backend-api-main" -- start
+sudo pm2 start npm  --name "backend-api-main" -- start
 ```
 # other command of pm2 if you need
 ```
