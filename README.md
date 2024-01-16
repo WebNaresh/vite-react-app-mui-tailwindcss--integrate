@@ -369,3 +369,18 @@ sudo service nginx restart
 ```sh
 sudo service nginx status
 ```
+# SSL certification with certbot python3
+```sh
+sudo add-apt-repository ppa:certbot/certbot
+```
+```sh
+sudo apt-get install python3-certbot-nginx
+```
+```sh
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+```
+
+# Only valid for 90 days, test the renewal process with
+```sh
+sudo certbot renew --dry-run
+```
