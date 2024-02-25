@@ -384,3 +384,11 @@ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 ```sh
 sudo certbot renew --dry-run
 ```
+# To check ssl certificate of cerbot
+```sh
+sudo certbot certificates
+```
+# To delete existing certificate using cerbot
+```sh
+sudo certbot delete --cert-name your_domain
+```
