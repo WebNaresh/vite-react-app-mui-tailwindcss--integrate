@@ -332,15 +332,15 @@ sudo pm2 start npm  --name "backend-api-main" -- start
 # other command of pm2 if you need
 ```
 sudo npm i pm2 -g
-pm2 start index
+sudo pm2 start index
 
 # Other pm2 commands
-pm2 show app
-pm2 status
-pm2 restart app
-pm2 stop app
-pm2 logs (Show log stream)
-pm2 flush (Clear logs)
+sudo pm2 show app
+sudo pm2 status
+sudo pm2 restart app
+sudo pm2 stop app
+sudo pm2 logs (Show log stream)
+sudo pm2 flush (Clear logs)
 
 # To make sure app starts when reboot
 sudo pm2 startup ubuntu
