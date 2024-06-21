@@ -1,7 +1,7 @@
-import useAppCookies from "./useAppCookies";
+import useAppState from "./useAppState";
 
 export const useAppFunction = () => {
-  const { setAppAlert, setAppLoading } = useAppCookies();
+  const { setAppAlert, setAppLoading } = useAppState();
 
   const handleAlert = (alert, type, msg) => {
     setAppAlert({
