@@ -104,7 +104,7 @@ export default function TopNav() {
               style={{ color: "#1D6EB7", fontWeight: "bold" }}
               component="h2"
             >
-              AEGi's Software
+              RMTF
             </Typography>
           </div>
           <Link

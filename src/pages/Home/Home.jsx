@@ -10,7 +10,6 @@ const Home = () => {
 
   return (
     <div style={{ height: "1222vh" }}>
-      Hello 1
       <Component1 />
     </div>
   );
