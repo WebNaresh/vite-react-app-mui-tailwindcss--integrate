@@ -361,9 +361,7 @@ sudo chmod +x /home/
 sudo chmod +x /home/ubuntu
 ```
 # Give permissions
-```sh
 sudo chmod -R 777 /home/ubuntu/prod-runner-backend/_work/AEGIS-backend/AEGIS-backend
-```sh
 
 # Restart the nginx server after save
 ```sh
